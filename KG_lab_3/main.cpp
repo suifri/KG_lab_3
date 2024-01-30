@@ -1,6 +1,9 @@
 #include <GL/glut.h>
 #include "Octahedron.h"
 
+const GLint WIDTH = 800;
+const GLint HEIGHT = 600;
+
 Octahedron* octa = new Octahedron();
 
 void init() 
@@ -8,6 +11,7 @@ void init()
     glEnable(GL_DEPTH_TEST); 
     glEnable(GL_LIGHTING); 
     glEnable(GL_LIGHT0); 
+    //glEnable(GL_COLOR_MATERIAL);
 
     GLfloat light_position[] = { 1.0f, 1.0f, 1.0f, 0.0f };
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
@@ -15,7 +19,8 @@ void init()
     GLfloat light_color[] = { 0.56f, 0.35f, 0.32f, 1.0f };
     glLightfv(GL_LIGHT0, GL_DIFFUSE, light_color);
 
-    glClearColor(0.0f, 0.3f, 0.0f, 1.0f); 
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f); 
+
 }
 
 void display() 
@@ -45,11 +50,12 @@ int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_DEPTH);
-    glutInitWindowSize(800, 600);
+    glutInitWindowSize(WIDTH, HEIGHT);
     glutCreateWindow("Lit Octahedron");
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     init();
+    octa->setShadeMode(false);
     glutTimerFunc(0, timer, 0);
     glutMainLoop();
 
