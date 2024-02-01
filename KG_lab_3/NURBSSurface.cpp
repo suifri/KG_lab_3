@@ -33,6 +33,8 @@ void NURBSSurface::display()
 		glEnd();
 	}
 
+	//glEvalMesh2(GL_FILL, 0, 20, 0, 20);
+
 	glPopMatrix();
 	glFlush();
 }
@@ -45,6 +47,7 @@ void NURBSSurface::init()
 	glMapGrid2f(20, 0.0f, 1.0f, 20, 0.0f, 1.0f);
 	glEnable(GL_DEPTH_TEST);
 	glShadeModel(GL_FLAT);
+
 }
 
 void NURBSSurface::reshape(int width, int height)

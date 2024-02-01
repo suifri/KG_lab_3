@@ -42,6 +42,9 @@
     <ClCompile Include="NURBSSurface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UpdateNURBSSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Octahedron.h">
@@ -66,6 +69,9 @@
       <Filter>Source Files\DrawOctahedronStrategy</Filter>
     </ClInclude>
     <ClInclude Include="NURBSSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateNURBSSurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

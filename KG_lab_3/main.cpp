@@ -1,28 +1,18 @@
 #include <GL/glut.h>
 #include "Octahedron.h"
 #include "NURBSSurface.h"
+#include "UpdateNURBSSurface.h"
 
 const GLint WIDTH = 500;
 const GLint HEIGHT = 500;
 
 Octahedron* octa = new Octahedron();
 NURBSSurface* nurbsSurf = new NURBSSurface();
+UpdateNURBSSurface* updNurbs = new UpdateNURBSSurface();
 
 void init() 
 {
-    glEnable(GL_DEPTH_TEST); 
-    glEnable(GL_LIGHTING); 
-    glEnable(GL_LIGHT0); 
-
-    GLfloat light_position[] = { 1.0f, 1.0f, 1.0f, 0.0f };
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-
-    GLfloat light_color[] = { 0.56f, 0.35f, 0.32f, 1.0f };
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, light_color);
-
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f); 
-
-    nurbsSurf->init();
+    updNurbs->init();
 
 }
 
@@ -36,13 +26,16 @@ void display()
 
     //glutSwapBuffers();
 
-    nurbsSurf->display();
+    //nurbsSurf->display();
+
+    updNurbs->display();
 }
 
 void reshape(int width, int height) 
 {
-    octa->reshape(width, height);
-    nurbsSurf->reshape(width, height);
+    //octa->reshape(width, height);
+    //nurbsSurf->reshape(width, height);
+    updNurbs->reshape(width, height);
 }
 
 //void timer(int value) {
