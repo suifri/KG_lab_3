@@ -1,7 +1,38 @@
-#Ignore all
-*
+# Prerequisites
+*.d
 
-#Unignore source code files
-!source/**/.cpp
-!source/**/.h
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.opendb
+*.sln
+.vcxproj
+
+/.vs/KG_lab_3/v17/.suo
