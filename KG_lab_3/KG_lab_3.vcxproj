@@ -166,6 +166,7 @@
     <ClCompile Include="InterpolatedOctahedronDrawingStrategy.cpp" />
     <ClCompile Include="IOctahedronDrawingStrategy.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NURBSSurface.cpp" />
     <ClCompile Include="Octahedron.cpp" />
     <ClCompile Include="SolidPolygonDrawingStrategy.cpp" />
     <ClCompile Include="StrategyChooser.cpp" />
@@ -174,6 +175,7 @@
   <ItemGroup>
     <ClInclude Include="InterpolatedOctahedronDrawingStrategy.h" />
     <ClInclude Include="IOctahedronDrawingStrategy.h" />
+    <ClInclude Include="NURBSSurface.h" />
     <ClInclude Include="Octahedron.h" />
     <ClInclude Include="OCTAHEDRON_TYPE.h" />
     <ClInclude Include="SolidPolygonDrawingStrategy.h" />

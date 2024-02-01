@@ -39,6 +39,9 @@
     <ClCompile Include="WireOctahedronDrawingStrategy.cpp">
       <Filter>Source Files\DrawOctahedronStrategy</Filter>
     </ClCompile>
+    <ClCompile Include="NURBSSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Octahedron.h">
@@ -61,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="InterpolatedOctahedronDrawingStrategy.h">
       <Filter>Source Files\DrawOctahedronStrategy</Filter>
+    </ClInclude>
+    <ClInclude Include="NURBSSurface.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
