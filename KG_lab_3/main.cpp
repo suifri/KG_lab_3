@@ -11,7 +11,6 @@ void init()
     glEnable(GL_DEPTH_TEST); 
     glEnable(GL_LIGHTING); 
     glEnable(GL_LIGHT0); 
-    //glEnable(GL_COLOR_MATERIAL);
 
     GLfloat light_position[] = { 1.0f, 1.0f, 1.0f, 0.0f };
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
@@ -55,7 +54,6 @@ int main(int argc, char** argv)
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     init();
-    octa->setShadeMode(false);
     glutTimerFunc(0, timer, 0);
     glutMainLoop();
 

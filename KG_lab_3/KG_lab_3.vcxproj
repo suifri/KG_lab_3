@@ -163,11 +163,22 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="InterpolatedOctahedronDrawingStrategy.cpp" />
+    <ClCompile Include="IOctahedronDrawingStrategy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Octahedron.cpp" />
+    <ClCompile Include="SolidPolygonDrawingStrategy.cpp" />
+    <ClCompile Include="StrategyChooser.cpp" />
+    <ClCompile Include="WireOctahedronDrawingStrategy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="InterpolatedOctahedronDrawingStrategy.h" />
+    <ClInclude Include="IOctahedronDrawingStrategy.h" />
     <ClInclude Include="Octahedron.h" />
+    <ClInclude Include="OCTAHEDRON_TYPE.h" />
+    <ClInclude Include="SolidPolygonDrawingStrategy.h" />
+    <ClInclude Include="StrategyChooser.h" />
+    <ClInclude Include="WireOctahedronDrawingStrategy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
