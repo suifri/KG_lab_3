@@ -2,6 +2,7 @@
 #include "Octahedron.h"
 #include "NURBSSurface.h"
 #include "UpdateNURBSSurface.h"
+#include "RealNURBS.h"
 
 const GLint WIDTH = 500;
 const GLint HEIGHT = 500;
@@ -9,11 +10,12 @@ const GLint HEIGHT = 500;
 Octahedron* octa = new Octahedron();
 NURBSSurface* nurbsSurf = new NURBSSurface();
 UpdateNURBSSurface* updNurbs = new UpdateNURBSSurface();
+RealNURBS* real = new RealNURBS();
 
 void init() 
 {
-    updNurbs->init();
-
+    //updNurbs->init();
+    real->init();
 }
 
 void display() 
@@ -28,14 +30,17 @@ void display()
 
     //nurbsSurf->display();
 
-    updNurbs->display();
+    //updNurbs->display();
+
+    real->display();
 }
 
 void reshape(int width, int height) 
 {
     //octa->reshape(width, height);
     //nurbsSurf->reshape(width, height);
-    updNurbs->reshape(width, height);
+    //updNurbs->reshape(width, height);
+    real->reshape(width, height);
 }
 
 //void timer(int value) {

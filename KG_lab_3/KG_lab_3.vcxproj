@@ -168,6 +168,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NURBSSurface.cpp" />
     <ClCompile Include="Octahedron.cpp" />
+    <ClCompile Include="RealNURBS.cpp" />
     <ClCompile Include="SolidPolygonDrawingStrategy.cpp" />
     <ClCompile Include="StrategyChooser.cpp" />
     <ClCompile Include="UpdateNURBSSurface.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="NURBSSurface.h" />
     <ClInclude Include="Octahedron.h" />
     <ClInclude Include="OCTAHEDRON_TYPE.h" />
+    <ClInclude Include="RealNURBS.h" />
     <ClInclude Include="SolidPolygonDrawingStrategy.h" />
     <ClInclude Include="StrategyChooser.h" />
     <ClInclude Include="UpdateNURBSSurface.h" />
