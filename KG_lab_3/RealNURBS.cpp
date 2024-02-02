@@ -51,7 +51,7 @@ void RealNURBS::init_surface()
 			if ((u == 1 || u == 2) && (v == 1 || v == 2))
 				*(*(*(this->controlPoints + u) + v) + 2) = 1.5;
 			else
-				*(*(*(this->controlPoints + u) + v) + 2) = -1.5;
+				*(*(*(this->controlPoints + u) + v) + 2) = -1.0;
 
 			*(*(*(this->controlPoints + u) + v) + 3) = 1.0;
 		}

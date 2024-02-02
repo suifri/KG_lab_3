@@ -48,6 +48,9 @@
     <ClCompile Include="RealNURBS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TrimmedBSplineSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Octahedron.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RealNURBS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrimmedBSplineSurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

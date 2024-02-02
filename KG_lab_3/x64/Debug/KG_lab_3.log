@@ -1,9 +1,2 @@
-﻿  RealNURBS.cpp
-D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\RealNURBS.cpp(9,2): warning C4150: deletion of pointer to incomplete type 'GLUnurbs'; no destructor called
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\GL\glu.h(157,7): message : see declaration of 'GLUnurbs'
-D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\RealNURBS.cpp(15,27): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\RealNURBS.cpp(15,32): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\RealNURBS.cpp(15,37): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\RealNURBS.cpp(48,45): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\RealNURBS.cpp(49,51): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+﻿  main.cpp
   KG_lab_3.vcxproj -> D:\Uni\Term 6\Programing_KG\KG_lab_3\x64\Debug\KG_lab_3.exe

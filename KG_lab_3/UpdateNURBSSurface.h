@@ -3,12 +3,12 @@
 #include <iostream>
 class UpdateNURBSSurface
 {
-private:
+protected:
 	GLfloat controlPoints[4][4][3];
 	GLUnurbsObj* nurbs;
 public:
 	UpdateNURBSSurface();
-	~UpdateNURBSSurface();
+	virtual ~UpdateNURBSSurface();
 
 	void init();
 	void init_surface();

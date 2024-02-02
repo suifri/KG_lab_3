@@ -171,6 +171,7 @@
     <ClCompile Include="RealNURBS.cpp" />
     <ClCompile Include="SolidPolygonDrawingStrategy.cpp" />
     <ClCompile Include="StrategyChooser.cpp" />
+    <ClCompile Include="TrimmedBSplineSurface.cpp" />
     <ClCompile Include="UpdateNURBSSurface.cpp" />
     <ClCompile Include="WireOctahedronDrawingStrategy.cpp" />
   </ItemGroup>
@@ -183,6 +184,7 @@
     <ClInclude Include="RealNURBS.h" />
     <ClInclude Include="SolidPolygonDrawingStrategy.h" />
     <ClInclude Include="StrategyChooser.h" />
+    <ClInclude Include="TrimmedBSplineSurface.h" />
     <ClInclude Include="UpdateNURBSSurface.h" />
     <ClInclude Include="WireOctahedronDrawingStrategy.h" />
   </ItemGroup>
