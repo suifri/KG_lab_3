@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  TrimmedBSplineSurface.cpp
+D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\TrimmedBSplineSurface.cpp(31,6): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\TrimmedBSplineSurface.cpp(31,11): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\TrimmedBSplineSurface.cpp(32,11): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\TrimmedBSplineSurface.cpp(34,6): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+D:\Uni\Term 6\Programing_KG\KG_lab_3\KG_lab_3\TrimmedBSplineSurface.cpp(34,11): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
   KG_lab_3.vcxproj -> D:\Uni\Term 6\Programing_KG\KG_lab_3\x64\Debug\KG_lab_3.exe
