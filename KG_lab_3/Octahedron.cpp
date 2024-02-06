@@ -21,6 +21,9 @@ Octahedron::~Octahedron()
 
 void Octahedron::display() const
 {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();
+
 	glPushMatrix();
 
     glTranslatef(0.0f, 0.0f, -5.0f); 
@@ -32,6 +35,8 @@ void Octahedron::display() const
     this->drawingStrategy->drawOctahedron();
 
 	glPopMatrix();
+
+    glutSwapBuffers();
 }
 
 void Octahedron::reshape(const int width, const int height) const
@@ -57,4 +62,19 @@ void Octahedron::timerIncrementation()
 void Octahedron::setOctahedronDrawingStrategy(const OCTAHEDRON_TYPE octaShape) noexcept
 {
     this->drawingStrategy = StrategyChooser::chooseStrategy(octaShape);
+}
+
+void Octahedron::init()
+{
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+
+    GLfloat light_position[] = { 1.0f, 1.0f, 1.0f, 0.0f };
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+
+    GLfloat light_color[] = { 0.56f, 0.35f, 0.32f, 1.0f };
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, light_color);
+
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 }

@@ -165,6 +165,7 @@
   <ItemGroup>
     <ClCompile Include="InterpolatedOctahedronDrawingStrategy.cpp" />
     <ClCompile Include="IOctahedronDrawingStrategy.cpp" />
+    <ClCompile Include="LabFacade.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NURBSSurface.cpp" />
     <ClCompile Include="Octahedron.cpp" />
@@ -178,6 +179,7 @@
   <ItemGroup>
     <ClInclude Include="InterpolatedOctahedronDrawingStrategy.h" />
     <ClInclude Include="IOctahedronDrawingStrategy.h" />
+    <ClInclude Include="LabFacade.h" />
     <ClInclude Include="NURBSSurface.h" />
     <ClInclude Include="Octahedron.h" />
     <ClInclude Include="OCTAHEDRON_TYPE.h" />
@@ -185,6 +187,7 @@
     <ClInclude Include="SolidPolygonDrawingStrategy.h" />
     <ClInclude Include="StrategyChooser.h" />
     <ClInclude Include="TrimmedBSplineSurface.h" />
+    <ClInclude Include="UNIT_TYPE.h" />
     <ClInclude Include="UpdateNURBSSurface.h" />
     <ClInclude Include="WireOctahedronDrawingStrategy.h" />
   </ItemGroup>

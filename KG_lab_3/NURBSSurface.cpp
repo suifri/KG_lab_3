@@ -33,8 +33,6 @@ void NURBSSurface::display()
 		glEnd();
 	}
 
-	//glEvalMesh2(GL_FILL, 0, 20, 0, 20);
-
 	glPopMatrix();
 	glFlush();
 }

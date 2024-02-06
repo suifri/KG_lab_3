@@ -31,9 +31,12 @@ void RealNURBS::init()
 
 	this->nurbs = gluNewNurbsRenderer();
 	gluNurbsProperty(this->nurbs, GLU_SAMPLING_TOLERANCE, 25.0);
-	//TODO: add GLU_OUTLINE_POLYGON option
-	//gluNurbsProperty(this->nurbs, GLU_DISPLAY_MODE, GLU_FILL); 
 	gluNurbsProperty(this->nurbs, GLU_DISPLAY_MODE, GLU_OUTLINE_POLYGON);
+}
+
+void RealNURBS::setTextureType(GLboolean textureType)
+{
+	textureType == false ? gluNurbsProperty(this->nurbs, GLU_DISPLAY_MODE, GLU_OUTLINE_POLYGON) : gluNurbsProperty(this->nurbs, GLU_DISPLAY_MODE, GLU_FILL);
 }
 
 void RealNURBS::init_surface()

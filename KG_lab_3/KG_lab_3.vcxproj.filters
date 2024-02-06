@@ -51,6 +51,9 @@
     <ClCompile Include="TrimmedBSplineSurface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LabFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Octahedron.h">
@@ -85,6 +88,12 @@
     </ClInclude>
     <ClInclude Include="TrimmedBSplineSurface.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LabFacade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UNIT_TYPE.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

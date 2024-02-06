@@ -3,56 +3,85 @@
 #include "NURBSSurface.h"
 #include "TrimmedBSplineSurface.h"
 #include "RealNURBS.h"
+#include "LabFacade.h"
 
 const GLint WIDTH = 500;
 const GLint HEIGHT = 500;
 
-Octahedron* octa = new Octahedron();
-NURBSSurface* nurbsSurf = new NURBSSurface();
-UpdateNURBSSurface* updNurbs = new UpdateNURBSSurface();
-RealNURBS* real = new RealNURBS();
-TrimmedBSplineSurface* trimmed = new TrimmedBSplineSurface();
+LabFacade* facade = new LabFacade();
 
-void init() 
+void mainMenuHandler(int choice)
 {
-    //updNurbs->init();
-    //real->init();
-    trimmed->init();
+    switch (choice)
+    {
+    case 0:
+        facade->setUnitType();
+        glutPostRedisplay();
+        break;
+    case 1:
+        facade->setUnitType(UNIT_TYPE::BSpline);
+        glutPostRedisplay();
+        break;
+    case 2:
+        facade->setUnitType(UNIT_TYPE::NURBSSurface);
+        glutPostRedisplay();
+        break;
+    case 3:
+        facade->setUnitType(UNIT_TYPE::TrimmedBSpline);
+        glutPostRedisplay();
+        break;
+    default:
+        break;
+    }
 }
 
+void subMenuHandler(int choice)
+{
+    switch (choice)
+    {
+    case 0:
+        facade->setOctahedronType();
+        break;
+    case 1:
+        facade->setOctahedronType(OCTAHEDRON_TYPE::WIRE);
+        break;
+    case 2:
+        facade->setOctahedronType(OCTAHEDRON_TYPE::INTERPOLATED);
+        break;
+    default:
+        break;
+    }
+}
+
+void NURBSSubMenuHandler(int choice)
+{
+    switch (choice)
+    {
+    case 0:
+        facade->setTextureType();
+        break;
+    case 1:
+        facade->setTextureType(true);
+        break;
+    default:
+        break;
+    }
+}
 void display() 
 {
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    //glLoadIdentity();
-    //
-    //octa->display();
-
-    //glutSwapBuffers();
-
-    //nurbsSurf->display();
-
-    //updNurbs->display();
-
-    //real->display();
-
-    trimmed->display();
+    facade->display();
 }
 
 void reshape(int width, int height) 
 {
-    //octa->reshape(width, height);
-    //nurbsSurf->reshape(width, height);
-    //updNurbs->reshape(width, height);
-    //real->reshape(width, height);
-    trimmed->reshape(width, height);
+    facade->reshape(width, height);
 }
 
-//void timer(int value) {
-//    octa->timerIncrementation();
-//    glutPostRedisplay(); 
-//    glutTimerFunc(16, timer, 0); 
-//}
+void timer(int value) {
+    facade->timeIncrementation();
+    glutPostRedisplay(); 
+    glutTimerFunc(16, timer, 0); 
+}
 
 int main(int argc, char** argv) 
 {
@@ -60,14 +89,34 @@ int main(int argc, char** argv)
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(WIDTH, HEIGHT);
     glutCreateWindow("Lit Octahedron");
-    init();
+    
+    
+    int octahedronSubMenu = glutCreateMenu(subMenuHandler);
+    glutAddMenuEntry("Solid", 0);
+    glutAddMenuEntry("Wire", 1);
+    glutAddMenuEntry("Interpolated", 2);
+
+   /* int NurbsSubMenu = glutCreateMenu(NURBSSubMenuHandler);
+    glutAddMenuEntry("Not fill", 0);
+    glutAddMenuEntry("Fill", 1);*/
+
+    glutCreateMenu(mainMenuHandler);
+    glutAddMenuEntry("Octahedron", 0);
+    glutAddMenuEntry("B-Spline", 1);
+    glutAddMenuEntry("NURBS-surface", 2);
+    glutAddMenuEntry("Trimmed B-spline", 3);
+    glutAddSubMenu("Octahedron texture", octahedronSubMenu);
+    //glutAddSubMenu("NURBS texture", NurbsSubMenu);
+
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
-    //glutTimerFunc(0, timer, 0);
+    glutTimerFunc(0, timer, 0);
     glutMainLoop();
 
-    delete octa;
-    octa = nullptr;
+    delete facade;
+    facade = nullptr;
 
     return 0;
 }

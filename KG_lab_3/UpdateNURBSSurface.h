@@ -15,4 +15,5 @@ public:
 	void nurbsError(GLenum errorCode);
 	void reshape(int width, int height);
 	void display();
+	void setTextureType(GLUnurbsObj* nurbs);
 };

@@ -4,7 +4,6 @@ TrimmedBSplineSurface::TrimmedBSplineSurface()
 {
 }
 
-//TODO: у бі-сплайновій поверхні вразіати  отвір, сформований NURBS-кривою
 void TrimmedBSplineSurface::display()
 {
     GLfloat knots[8] = { 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0 };
@@ -17,11 +16,11 @@ void TrimmedBSplineSurface::display()
 
    gluBeginSurface(this->nurbs);
     gluNurbsSurface(this->nurbs, 8, knots, 8, knots,
-        4 * 3, 3, &this->controlPoints[0][0][0],
+        4 * 3, 3, **this->controlPoints,
         4, 4, GL_MAP2_VERTEX_3);
 
     gluBeginTrim(this->nurbs);
-    gluPwlCurve(this->nurbs, 5, &edgePt[0][0], 2,
+    gluPwlCurve(this->nurbs, 5, *edgePt, 2,
         GLU_MAP1_TRIM_2);
     gluEndTrim(this->nurbs);
 
@@ -34,7 +33,7 @@ void TrimmedBSplineSurface::display()
     {0.2, 0.2, 1.0} 
     };
 
-    gluNurbsCurve(this->nurbs, 8, knots, 3, &ctrlPoints1[0][0], 4, GLU_MAP1_TRIM_3);
+    gluNurbsCurve(this->nurbs, 8, knots, 3, *ctrlPoints1, 4, GLU_MAP1_TRIM_3);
     gluEndTrim(this->nurbs);
 
     gluEndSurface(this->nurbs);
